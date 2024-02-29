@@ -1,7 +1,16 @@
-# Request Diagram
+# TasaVE Native Backend
 
-- User Request -> load collections from metadata -> get latest rate (or historic n rates) -> return response separating rates in an object with from/to currencies
+This repository contains two directories: api and scrapers.
+
+## api
+The api directory contains an express api served as a google cloud function with two endpoints:
+- /v1/rates: Gets the latest rates from each of the supported currency pairs
+- /v1/ping: Returns a 200 response.
+
+A live deployment of the API can be accessed [here](https://api-5uzosi7y6a-uk.a.run.app/v1/rates).
+
+## scrapers
+The scrapers directory contains two cloud functions written in Python that are executed on a schedule to scrape exchange rates from each of the supported currencies.
 
 ## TODO
-- Get update from enparalelo and add it to database
-- Create API (Latest rates, historic rates)
+- Create endpoint for historic rates
