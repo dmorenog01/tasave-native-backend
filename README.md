@@ -2,6 +2,8 @@
 
 This repository contains two directories: api and scrapers.
 
+You can also access the repo for the React Native app [here](https://github.com/dmorenog01/tasave-native)
+
 ## api
 The api directory contains an express api served as a google cloud function with two endpoints:
 - /v1/rates: Gets the latest rates from each of the supported currency pairs
