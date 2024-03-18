@@ -101,7 +101,7 @@ def parseMessage(message: str, indices: tuple):
     rate = message[moneyEmojiIndex+1:moneyEmojiIndex+11].strip()
     rate = parseRatestring(rate)
 
-    hour, am_pm = time.split(' ')
+    hour, am_pm = filter(lambda x: len(x) > 0, time.split(' '))
     hour = padHour(hour)
     date_string = f'{date} {hour} {am_pm}'
 
